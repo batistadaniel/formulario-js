@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/style.css">
+    <title>Formulário de Cadastro de Usuário SUS</title>
+</head>
+<body>
+    
+
+    <main>
+        <form id="formularioE">
+            <div class="msgAlerta" id="msgAlerta">
+                <p></p>
+            </div>
+            
+            <div class="formulario">
+
+                <h1>Formulário de Cadastro de Usuário SUS</h1>
+
+                <div class="campos campo-cpf">
+                    <div class="icon-container">
+                        <h3 for="cpf">CPF*: </h3> 
+                        <img src="https://img.icons8.com/?size=100&id=16140&format=png&color=000000" alt="Icon" class="icon" onclick="mostrarAlerta(0)">
+                    </div>
+                    <input type="text" id="cpf" name="cpf" required>
+                </div>
+                
+                <div class="campos campo-cns">
+                    <div class="icon-container">
+                        <h3 for="cns">CNS - Cartão Nacional de Saúde: </h3>
+                        <img src="https://img.icons8.com/?size=100&id=16140&format=png&color=000000" alt="Icon" class="icon" onclick="mostrarAlerta(1)">
+                    </div>
+                    <input type="text" id="cns" name="cns">
+                </div>
+
+                <div class="campos campo-sinan">
+                    <div class="icon-container">
+                        <h3 for="sinan">SINAN: </h3>
+                        <img src="https://img.icons8.com/?size=100&id=16140&format=png&color=000000" alt="Icon" class="icon" onclick="mostrarAlerta(2)">
+                    </div>
+                    <input type="text" id="sinan" name="sinan">
+                </div>
+
+                <div class="campos campo-prontuario">
+                    <div class="icon-container">
+                        <h3 for="prontuario">Prontuário: </h3>
+                        <img src="https://img.icons8.com/?size=100&id=16140&format=png&color=000000" alt="Icon" class="icon" onclick="mostrarAlerta(3)">
+                    </div>
+                    <input type="text" id="prontuario" name="prontuario" >
+                </div>
+                
+                <div class="campos campo-identificacao">
+                    <div class="icon-container">
+                        <h3>Identificação Preferencial do Usuário*: </h3>
+                        <img src="https://img.icons8.com/?size=100&id=16140&format=png&color=000000" alt="Icon" class="icon" onclick="mostrarAlerta(4)">
+                    </div>
+                
+                    <div class="inputs-radio">
+                        <input type="radio" name="identificacao" id="nomeCivil" required>
+                        <label for="nomeCivil">Nome Civil</label>
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="identificacao" id="nomeSocial">
+                        <label for="nomeSocial">Nome Social</label>
+                    </div>
+                </div>
+                
+                <div class="campos campo-nomeCivilCompleto">
+                    <div class="icon-container">
+                        <h3 for="nomeCivilCompleto">Nome Completo do Usuário - Civil*: </h3>
+                        <img src="https://img.icons8.com/?size=100&id=16140&format=png&color=000000" alt="Icon" class="icon" onclick="mostrarAlerta(5)">
+                    </div>
+                    <input type="text" id="nomeCivilCompleto" name="nomeCivilCompleto" required>
+                </div>
+
+                <div class="campos campo-nomeSocialCompleto">
+                    <div class="icon-container">
+                        <h3 for="nomeSocialCompleto">Nome Social: </h3>
+                        <img src="https://img.icons8.com/?size=100&id=16140&format=png&color=000000" alt="Icon" class="icon" onclick="mostrarAlerta(6)">
+                    </div>
+                    <input type="text" id="nomeSocialCompleto" name="nomeSocialCompleto" >
+                </div>
+
+                <div class="campos campo-nomeMae">
+                    <div class="icon-container">
+                        <h3 for="nomeMae">Nome Completo da Mãe*: </h3>
+                        <img src="https://img.icons8.com/?size=100&id=16140&format=png&color=000000" alt="Icon" class="icon" onclick="mostrarAlerta(7)">
+                    </div>
+                    <input type="text" id="nomeMae" name="nomeMae" required>
+                </div>
+
+                <div class="campos campo-dtNascimento">
+                    <div class="icon-container">
+                        <h3 for="dtNascimento">Data de Nascimento*: </h3>
+                        <img src="https://img.icons8.com/?size=100&id=16140&format=png&color=000000" alt="Icon" class="icon" onclick="mostrarAlerta(8)">
+                    </div>
+                    <input type="date" id="dtNascimento" name="dtNascimento" required>
+                </div>
+                
+                <div class="campos campo-racaCor">
+                    <div class="icon-container">
+                        <h3>Raça/cor*:</h3>
+                        <img src="https://img.icons8.com/?size=100&id=16140&format=png&color=000000" alt="Icon" class="icon" onclick="mostrarAlerta(9)">
+                    </div>
+                
+                    <div class="inputs-radio">
+                        <input type="radio" name="raca" id="amarela" required>
+                        <label for="amarela">Amarela</label>
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="raca" id="branca">
+                        <label for="branca">Branca</label>
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="raca" id="preta">
+                        <label for="preta">Preta</label>
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="raca" id="parda">
+                        <label for="parda">Parda</label>
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="raca" id="indigena">
+                        <label for="indigena">Indígena</label>
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="raca" id="ignorada">
+                        <label for="ignorada">Ignorada</label>
+                    </div>
+                </div>
+                
+
+                <div class="campos campo-sexo">
+                    <div class="icon-container">
+                        <h3>Sexo atribuído ao Nascimento*: </h3>
+                        <img src="https://img.icons8.com/?size=100&id=16140&format=png&color=000000" alt="Icon" class="icon" onclick="mostrarAlerta(10)">
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="sexo" id="feminino" required>
+                        <label for="feminino">Feminino</label>
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="sexo" id="masculino">
+                        <label for="masculino">Masculino</label>
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="sexo" id="intersexo">
+                        <label for="intersexo">Intersexo</label>
+                    </div>
+                </div>
+                
+                <div class="campos campo-genero">
+                    <div class="icon-container">
+                        <h3>Identidade de Gênero*: </h3>
+                        <img src="https://img.icons8.com/?size=100&id=16140&format=png&color=000000" alt="Icon" class="icon" onclick="mostrarAlerta(11)">
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="genero" id="mulher-cis" required>
+                        <label for="mulher-cis">Mulher CIS</label>
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="genero" id="homem-cis">
+                        <label for="homem-cis">Homem CIS</label>
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="genero" id="mulher-trans">
+                        <label for="mulher-trans">Mulher trans</label>
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="genero" id="homem-trans">
+                        <label for="homem-trans">Homem trans</label>
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="genero" id="travesti">
+                        <label for="travesti">Travesti</label>
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="genero" id="nao-binario">
+                        <label for="nao-binario">Não binário</label>
+                    </div>
+                </div>
+                
+                <div class="campos campo-orientacao">
+                    <div class="icon-container">
+                        <h3>Orientação Sexual*: </h3>
+                        <img src="https://img.icons8.com/?size=100&id=16140&format=png&color=000000" alt="Icon" class="icon" onclick="mostrarAlerta(12)">
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="orientacao" id="heterossexual" required>
+                        <label for="heterossexual">Heterossexual</label>
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="orientacao" id="bissexual">
+                        <label for="bissexual">Bissexual</label>
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="orientacao" id="homossexual">
+                        <label for="homossexual">Homossexual/Gay/Lésbica</label>
+                    </div>
+                </div>      
+                
+                <!-- <div class="campos campo-uf">
+                    <div class="icon-container">
+                        <h3 for="estado">Estado: </h3>
+                        <img src="https://img.icons8.com/?size=100&id=16140&format=png&color=000000" alt="Icon" class="icon">
+                    </div>
+                    <select id="estado" name="estado" required>
+                        <option value="">Escolha um estado</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                </div> -->
+
+                <div class="campos campo-cidadeNascimento">
+                    <div class="icon-container">
+                        <h3 for="cidadeNascimento">Cidade de Nascimento(Cidade/UF)*: </h3>
+                        <img src="https://img.icons8.com/?size=100&id=16140&format=png&color=000000" alt="Icon" class="icon" onclick="mostrarAlerta(13)">
+                    </div>
+                    <input type="text" id="cidadeNascimento" name="cidadeNascimento" >
+                </div>
+                
+                <div class="campos campo-pais">
+                    <div class="icon-container">
+                        <h3 for="pais">País de Nascimento: </h3>
+                        <img src="https://img.icons8.com/?size=100&id=16140&format=png&color=000000" alt="Icon" class="icon" onclick="mostrarAlerta(14)">
+                    </div>
+                    <select id="pais" name="pais" required>
+                        <option value="">Escolha um país</option>
+                        <option value="BR">Brasil</option>
+                        <option value="AF">Afeganistão</option>
+                        <option value="ZA">África do Sul</option>
+                        <option value="AL">Albânia</option>
+                        <option value="DE">Alemanha</option>
+                        <option value="AD">Andorra</option>
+                        <option value="AO">Angola</option>
+                        <option value="AI">Anguilla</option>
+                        <option value="AQ">Antártida</option>
+                        <option value="AG">Antígua e Barbuda</option>
+                        <option value="SA">Arábia Saudita</option>
+                        <option value="DZ">Argélia</option>
+                        <option value="AR">Argentina</option>
+                        <option value="AM">Armênia</option>
+                        <option value="AW">Aruba</option>
+                        <option value="AU">Austrália</option>
+                        <option value="AT">Áustria</option>
+                        <option value="AZ">Azerbaijão</option>
+                        <option value="BS">Bahamas</option>
+                        <option value="BH">Bahrein</option>
+                        <option value="BD">Bangladesh</option>
+                        <option value="BB">Barbados</option>
+                        <option value="BY">Bielorrússia</option>
+                        <option value="BE">Bélgica</option>
+                        <option value="BZ">Belize</option>
+                        <option value="BJ">Benin</option>
+                        <option value="BM">Bermudas</option>
+                        <option value="BO">Bolívia</option>
+                        <option value="BA">Bósnia e Herzegovina</option>
+                        <option value="BW">Botsuana</option>
+                        <option value="BN">Brunei</option>
+                        <option value="BG">Bulgária</option>
+                        <option value="BF">Burquina Faso</option>
+                        <option value="BI">Burundi</option>
+                        <option value="BT">Butão</option>
+                        <option value="CV">Cabo Verde</option>
+                        <option value="CM">Camarões</option>
+                        <option value="KH">Camboja</option>
+                        <option value="CA">Canadá</option>
+                        <option value="QA">Catar</option>
+                        <option value="KZ">Cazaquistão</option>
+                        <option value="TD">Chade</option>
+                        <option value="CL">Chile</option>
+                        <option value="CN">China</option>
+                        <option value="CY">Chipre</option>
+                        <option value="SG">Cingapura</option>
+                        <option value="CO">Colômbia</option>
+                        <option value="KM">Comores</option>
+                        <option value="CG">Congo</option>
+                        <option value="CD">Congo (Rep. Dem.)</option>
+                        <option value="KP">Coreia do Norte</option>
+                        <option value="KR">Coreia do Sul</option>
+                        <option value="CR">Costa Rica</option>
+                        <option value="CI">Costa do Marfim</option>
+                        <option value="HR">Croácia</option>
+                        <option value="CU">Cuba</option>
+                        <option value="DK">Dinamarca</option>
+                        <option value="DJ">Djibouti</option>
+                        <option value="DM">Dominica</option>
+                        <option value="EG">Egito</option>
+                        <option value="SV">El Salvador</option>
+                        <option value="AE">Emirados Árabes Unidos</option>
+                        <option value="EC">Equador</option>
+                        <option value="ER">Eritreia</option>
+                        <option value="SK">Eslováquia</option>
+                        <option value="SI">Eslovênia</option>
+                        <option value="ES">Espanha</option>
+                        <option value="US">Estados Unidos</option>
+                        <option value="EE">Estônia</option>
+                        <option value="ET">Etiópia</option>
+                        <option value="FJ">Fiji</option>
+                        <option value="PH">Filipinas</option>
+                        <option value="FI">Finlândia</option>
+                        <option value="FR">França</option>
+                        <option value="GA">Gabão</option>
+                        <option value="GM">Gâmbia</option>
+                        <option value="GH">Gana</option>
+                        <option value="GE">Geórgia</option>
+                        <option value="GI">Gibraltar</option>
+                        <option value="GR">Grécia</option>
+                        <option value="GD">Granada</option>
+                        <option value="GL">Groenlândia</option>
+                        <option value="GP">Guadalupe</option>
+                        <option value="GU">Guam</option>
+                        <option value="GT">Guatemala</option>
+                        <option value="GY">Guiana</option>
+                        <option value="GF">Guiana Francesa</option>
+                        <option value="GW">Guiné-Bissau</option>
+                        <option value="GN">Guiné</option>
+                        <option value="GQ">Guiné Equatorial</option>
+                        <option value="HT">Haiti</option>
+                        <option value="NL">Holanda</option>
+                        <option value="HN">Honduras</option>
+                        <option value="HU">Hungria</option>
+                        <option value="YE">Iémen</option>
+                        <option value="BV">Ilha Bouvet</option>
+                        <option value="CX">Ilha Christmas</option>
+                        <option value="IM">Ilha de Man</option>
+                        <option value="NF">Ilha Norfolk</option>
+                        <option value="KY">Ilhas Cayman</option>
+                        <option value="CC">Ilhas Cocos</option>
+                        <option value="CK">Ilhas Cook</option>
+                        <option value="FK">Ilhas Falkland</option>
+                        <option value="FO">Ilhas Faroe</option>
+                        <option value="HM">Ilhas Heard e McDonald</option>
+                        <option value="MP">Ilhas Marianas do Norte</option>
+                        <option value="MH">Ilhas Marshall</option>
+                        <option value="UM">Ilhas Menores Distantes dos EUA</option>
+                        <option value="SB">Ilhas Salomão</option>
+                        <option value="TC">Ilhas Turks e Caicos</option>
+                        <option value="VG">Ilhas Virgens Britânicas</option>
+                        <option value="VI">Ilhas Virgens dos EUA</option>
+                        <option value="IN">Índia</option>
+                        <option value="ID">Indonésia</option>
+                        <option value="IR">Irã</option>
+                        <option value="IQ">Iraque</option>
+                        <option value="IE">Irlanda</option>
+                        <option value="IS">Islândia</option>
+                        <option value="IL">Israel</option>
+                        <option value="IT">Itália</option>
+                        <option value="JM">Jamaica</option>
+                        <option value="JP">Japão</option>
+                        <option value="JO">Jordânia</option>
+                        <option value="KW">Kuwait</option>
+                        <option value="LA">Laos</option>
+                        <option value="LV">Letônia</option>
+                        <option value="LS">Lesoto</option>
+                        <option value="LB">Líbano</option>
+                        <option value="LR">Libéria</option>
+                        <option value="LY">Líbia</option>
+                        <option value="LI">Liechtenstein</option>
+                        <option value="LT">Lituânia</option>
+                        <option value="LU">Luxemburgo</option>
+                        <option value="MO">Macau</option>
+                        <option value="MK">Macedônia</option>
+                        <option value="MG">Madagascar</option>
+                        <option value="MY">Malásia</option>
+                        <option value="MW">Malawi</option>
+                        <option value="MV">Maldivas</option>
+                        <option value="ML">Mali</option>
+                        <option value="MT">Malta</option>
+                        <option value="MA">Marrocos</option>
+                        <option value="MQ">Martinica</option>
+                        <option value="MU">Maurícia</option>
+                        <option value="MR">Mauritânia</option>
+                        <option value="YT">Mayotte</option>
+                        <option value="MX">México</option>
+                        <option value="FM">Micronésia</option>
+                        <option value="MZ">Moçambique</option>
+                        <option value="MD">Moldávia</option>
+                        <option value="MC">Mônaco</option>
+                        <option value="MN">Mongólia</option>
+                        <option value="ME">Montenegro</option>
+                        <option value="MS">Montserrat</option>
+                        <option value="MM">Myanmar</option>
+                        <option value="NA">Namíbia</option>
+                        <option value="NR">Nauru</option>
+                        <option value="NP">Nepal</option>
+                        <option value="NI">Nicarágua</option>
+                        <option value="NE">Níger</option>
+                        <option value="NG">Nigéria</option>
+                        <option value="NU">Niue</option>
+                        <option value="NO">Noruega</option>
+                        <option value="NC">Nova Caledônia</option>
+                        <option value="NZ">Nova Zelândia</option>
+                        <option value="OM">Omã</option>
+                        <option value="PW">Palau</option>
+                        <option value="PS">Palestina</option>
+                        <option value="PA">Panamá</option>
+                        <option value="PG">Papua-Nova Guiné</option>
+                        <option value="PK">Paquistão</option>
+                        <option value="PY">Paraguai</option>
+                        <option value="PE">Peru</option>
+                        <option value="PN">Pitcairn</option>
+                        <option value="PF">Polinésia Francesa</option>
+                        <option value="PL">Polônia</option>
+                        <option value="PR">Porto Rico</option>
+                        <option value="PT">Portugal</option>
+                        <option value="KE">Quênia</option>
+                        <option value="KG">Quirguistão</option>
+                        <option value="GB">Reino Unido</option>
+                        <option value="CF">República Centro-Africana</option>
+                        <option value="CZ">República Checa</option>
+                        <option value="DO">República Dominicana</option>
+                        <option value="RE">Reunião</option>
+                        <option value="RO">Romênia</option>
+                        <option value="RW">Ruanda</option>
+                        <option value="RU">Rússia</option>
+                        <option value="EH">Saara Ocidental</option>
+                        <option value="PM">Saint Pierre e Miquelon</option>
+                        <option value="WS">Samoa</option>
+                        <option value="AS">Samoa Americana</option>
+                        <option value="SM">San Marino</option>
+                        <option value="SH">Santa Helena</option>
+                        <option value="LC">Santa Lúcia</option>
+                        <option value="BL">São Bartolomeu</option>
+                        <option value="KN">São Cristóvão e Névis</option>
+                        <option value="MF">São Martinho</option>
+                        <option value="ST">São Tomé e Príncipe</option>
+                        <option value="VC">São Vicente e Granadinas</option>
+                        <option value="SN">Senegal</option>
+                        <option value="SL">Serra Leoa</option>
+                        <option value="RS">Sérvia</option>
+                        <option value="SC">Seychelles</option>
+                        <option value="SY">Síria</option>
+                        <option value="SO">Somália</option>
+                        <option value="LK">Sri Lanka</option>
+                        <option value="SZ">Suazilândia</option>
+                        <option value="SD">Sudão</option>
+                        <option value="SS">Sudão do Sul</option>
+                        <option value="SE">Suécia</option>
+                        <option value="CH">Suíça</option>
+                        <option value="SR">Suriname</option>
+                        <option value="SJ">Svalbard e Jan Mayen</option>
+                        <option value="TH">Tailândia</option>
+                        <option value="TW">Taiwan</option>
+                        <option value="TJ">Tajiquistão</option>
+                        <option value="TZ">Tanzânia</option>
+                        <option value="TL">Timor-Leste</option>
+                        <option value="TG">Togo</option>
+                        <option value="TK">Tokelau</option>
+                        <option value="TO">Tonga</option>
+                        <option value="TT">Trindade e Tobago</option>
+                        <option value="TN">Tunísia</option>
+                        <option value="TM">Turcomenistão</option>
+                        <option value="TR">Turquia</option>
+                        <option value="TV">Tuvalu</option>
+                        <option value="UA">Ucrânia</option>
+                        <option value="UG">Uganda</option>
+                        <option value="UY">Uruguai</option>
+                        <option value="UZ">Uzbequistão</option>
+                        <option value="VU">Vanuatu</option>
+                        <option value="VA">Vaticano</option>
+                        <option value="VE">Venezuela</option>
+                        <option value="VN">Vietnã</option>
+                        <option value="WF">Wallis e Futuna</option>
+                        <option value="ZM">Zâmbia</option>
+                        <option value="ZW">Zimbábue</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <div class="campos campo-nacionalidade">
+                        <div class="icon-container">
+                            <h3>Nacionalidade*: </h3>
+                            <img src="https://img.icons8.com/?size=100&id=16140&format=png&color=000000" alt="Icon" class="icon" onclick="mostrarAlerta(15)">
+                        </div>
+                        <input type="text" required>
+                    </div>
+                </div>
+                
+                <div class="campos campo-estrangeiro">
+                    <div class="icon-container">
+                        <h3>Situação do estrangeiro: </h>
+                        <img src="https://img.icons8.com/?size=100&id=16140&format=png&color=000000" alt="Icon" class="icon" onclick="mostrarAlerta(16)">
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="estrangeiro" id="residente">
+                        <label for="residente">Residente</label>
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="estrangeiro" id="habitanteFronteira">
+                        <label for="habitanteFronteira">Habitante de fronteira</label>
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="estrangeiro" id="naoResidente">
+                        <label for="naoResidente">Não residente</label>
+                    </div>
+                </div>                
+
+                <div class="campos campo-escolariedade">
+                    <div class="icon-container">
+                        <h3>Escolaridade*: </h3>
+                        <img src="https://img.icons8.com/?size=100&id=16140&format=png&color=000000" alt="Icon" class="icon" onclick="mostrarAlerta(17)">
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="escolariedade" id="na">
+                        <label for="na">Nenhuma/ Sem educação formal</label>
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="escolariedade" id="ignorado">
+                        <label for="ignorado">Ignorado</label>
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="escolariedade" id="1_3">
+                        <label for="1_3">De 1 a 3 anos</label>
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="escolariedade" id="4_7">
+                        <label for="4_7">De 4 a 7 anos</label>
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="escolariedade" id="8_11">
+                        <label for="8_11">De 8 a 11 anos</label>
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="escolariedade" id="12_">
+                        <label for="12_">De 12 a mais anos</label>
+                    </div>
+                </div>
+                
+                <div class="campos campo-vulnerabilidade">
+                    <div class="icon-container">
+                        <h3>Pessoa em situação de rua no momento*: </h3>
+                        <img src="https://img.icons8.com/?size=100&id=16140&format=png&color=000000" alt="Icon" class="icon" onclick="mostrarAlerta(18)">
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="vulnerabilidade" id="simVulneravel" required>
+                        <label for="simVulneravel">Sim</label>
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="vulnerabilidade" id="naoVulneravel">
+                        <label for="naoVulneravel">Não</label>
+                    </div>
+                </div>
+                
+                <div class="campos campo-liberdade">
+                    <div class="icon-container">
+                        <h3>Pessoa privada de liberdade no momento*: </h3>
+                        <img src="https://img.icons8.com/?size=100&id=16140&format=png&color=000000" alt="Icon" class="icon" onclick="mostrarAlerta(19)">
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="liberdade" id="simLiberdade" required>
+                        <label for="simLiberdade">Sim</label>
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="liberdade" id="naoLiberdade">
+                        <label for="naoLiberdade">Não</label>
+                    </div>
+                </div>
+                
+                <div class="campos campo-permiteContato">
+                    <div class="icon-container">
+                        <h3>Permite Contato*: </h3>
+                        <img src="https://img.icons8.com/?size=100&id=16140&format=png&color=000000" alt="Icon" class="icon" onclick="mostrarAlerta(20)">
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="permissaoContato" id="simContato" required>
+                        <label for="simContato">Sim</label>
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="permissaoContato" id="naoContato">
+                        <label for="naoContato">Não</label>
+                    </div>
+                </div>
+
+                <div class="campos campo-tipoContato">
+                    <div class="icon-container">
+                        <h3>Tipo de Contato*: </h3>
+                        <img src="https://img.icons8.com/?size=100&id=16140&format=png&color=000000" alt="Icon" class="icon" onclick="mostrarAlerta(21)">
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="tipoContato" id="telefone" onclick="esconderInputOutros()" required>
+                        <label for="telefone">Telefone</label>
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="tipoContato" id="correio" onclick="esconderInputOutros()">
+                        <label for="correio">Correio</label>
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="tipoContato" id="email" onclick="esconderInputOutros()">
+                        <label for="email">E-mail</label>
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="tipoContato" id="domicilio" onclick="esconderInputOutros()">
+                        <label for="domicilio">Visita Domiciliar</label>
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="tipoContato" id="terceiros" onclick="esconderInputOutros()">
+                        <label for="terceiros">Contato com terceiros</label>
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="tipoContato" id="outros" onclick="mostrarInputOutros()">
+                        <label for="outros">Outros:</label>
+                        <div class="input-outros">
+                            <input type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="campos campo-atencao">
+                    <p><img src="https://img.icons8.com/?size=100&id=11691&format=png&color=000000" alt=""><span>Atenção: </span> Caso não compareça ao tratamento nas datas agendadas, autorizo este serviço de saúde a entrar em contato comigo, respeitando o meu direito a privacidade e sigilo das informações. Somente preencher os dados de endereço se o usuário autorizar o contato.</p>
+                </div>
+
+                <div class="campos campo-endereco">
+                    <div class="icon-container">
+                        <h3>Endereço: </h3>
+                        <img src="https://img.icons8.com/?size=100&id=16140&format=png&color=000000" alt="Icon" class="icon" onclick="mostrarAlerta(22)">
+                    </div>
+                    <input type="text" id="endereco" name="endereco">
+                </div>
+
+                <div class="campos campo-bairro">
+                    <div class="icon-container">
+                        <h3>Bairro: </h3>
+                        <img src="https://img.icons8.com/?size=100&id=16140&format=png&color=000000" alt="Icon" class="icon" onclick="mostrarAlerta(23)">
+                    </div>
+                    <input type="text" id="bairro" name="bairro">
+                </div>
+
+                <div class="campos campo-cep">
+                    <div class="icon-container">
+                        <h3>CEP: </h3>
+                        <img src="https://img.icons8.com/?size=100&id=16140&format=png&color=000000" alt="Icon" class="icon" onclick="mostrarAlerta(24)">
+                    </div>
+                    <input type="text" id="cep" name="cep" maxlength="9" size="9" >
+                </div>
+
+                <div class="campos campo-cidade">
+                    <div class="icon-container">
+                        <h3>Cidade de Residência(Cidade/UF)*:</h3>
+                        <img src="https://img.icons8.com/?size=100&id=16140&format=png&color=000000" alt="Icon" class="icon" onclick="mostrarAlerta(25)">
+                    </div>
+                    <input type="text" id="cidade" name="cidade" required>
+                </div>
+
+                <div class="campos campo-emailCad">
+                    <div class="icon-container">
+                        <h3>E-mail: </h3>
+                        <img src="https://img.icons8.com/?size=100&id=16140&format=png&color=000000" alt="Icon" class="icon" onclick="mostrarAlerta(26)">
+                    </div>
+                    <input type="text" id="emailCad" name="emailCad" >
+                </div>
+
+                <div class="campos campo-tipoTelefone_1">
+                    <div class="icon-container">
+                        <h3>Tipo de telefone: </h3>
+                        <img src="https://img.icons8.com/?size=100&id=16140&format=png&color=000000" alt="Icon" class="icon" onclick="mostrarAlerta(27)">
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="tipoTelefone1" id="residencial_1" required>
+                        <label for="residencial_1">Residencial</label>
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="tipoTelefone1" id="comercial_1">
+                        <label for="comercial_1">Comercial</label>
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="tipoTelefone1" id="celular_1">
+                        <label for="celular_1">Celular</label>
+                    </div>
+
+                    <h4>Telefone para contato (DDD+Número)</h4>
+                    <input type="text" id="telefoneContato_1" name="telefoneContato_1" >
+                </div>  
+
+                <div class="campos campo-tipoTelefone_2">
+                    <div class="icon-container">
+                        <h3>Tipo de telefone: </h3>
+                        <img src="https://img.icons8.com/?size=100&id=16140&format=png&color=000000" alt="Icon" class="icon" onclick="mostrarAlerta(28)">
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="tipoTelefone2" id="residencial_2" required>
+                        <label for="residencial_2">Residencial</label>
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="tipoTelefone1" id="comercial_2">
+                        <label for="comercial_2">Comercial</label>
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="tipoTelefone1" id="celular_2">
+                        <label for="celular_2">Celular</label>
+                    </div>
+
+                    <h4>Telefone para contato (DDD+Número)</h4>
+                    <input type="text" id="telefoneContato_2" name="telefoneContato_2" >
+                </div>  
+
+                <div class="icon-container">
+                    <h3>Observações: </h3>
+                    <img src="https://img.icons8.com/?size=100&id=16140&format=png&color=000000" alt="Icon" class="icon" onclick="mostrarAlerta(29)">
+                </div>
+                <textarea class="observacoes" name="observacoes" id="observacoes" ></textarea>
+
+                <div class="campos campo-acomMedico">
+                    <div class="icon-container">
+                        <h3>Acompanhamento médico no momento*:</h3>
+                        <img src="https://img.icons8.com/?size=100&id=16140&format=png&color=000000" alt="Icon" class="icon" onclick="mostrarAlerta(30)">
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="acomMedico" id="publico" required>
+                        <label for="publico">Público</label>
+                    </div>
+                    
+                    <div class="inputs-radio">
+                        <input type="radio" name="acomMedico" id="privado">
+                        <label for="privado">Privado</label>
+                    </div>
+                </div>
+
+                <div class="campos campo-pessoasAutorizadas">
+                    <div class="icon-container">
+                        <h3>Pessoas autorizadas a retirar o medicamento: </h3>
+                        <img src="https://img.icons8.com/?size=100&id=16140&format=png&color=000000" alt="Icon" class="icon" onclick="mostrarAlerta(31)">
+                    </div>
+                    <input type="text" id="pessoa_1" name="pessoa_1" placeholder="Nome Completo da 1ª pessoa">
+                    <input type="text" id="pessoa_2" name="pessoa_2" placeholder="Nome Completo da 2ª pessoa">
+                    <input type="text" id="pessoa_3" name="pessoa_3" placeholder="Nome Completo da 3ª pessoa">
+                </div>
+
+                <div class="campos campo-responsavelPreenchimento">
+                    <div class="icon-container">
+                        <h3>Responsável pelo Preenchimento*: </h3>
+                        <img src="https://img.icons8.com/?size=100&id=16140&format=png&color=000000" alt="Icon" class="icon" onclick="mostrarAlerta(32)">
+                    </div>
+                    <input type="text" id="responsavelPreenchimento" name="responsavelPreenchimento" required>
+                    <input type="date" name="dataPreenchimento" id="dataPreenchimento" value="2024-07-31">
+                </div>
+
+                <div class="campos campo-usuarioSUS">
+                    <div class="icon-container">
+                        <h3>Usuário SUS: </h3>
+                        <img src="https://img.icons8.com/?size=100&id=16140&format=png&color=000000" alt="Icon" class="icon" onclick="mostrarAlerta(33)">
+                    </div>
+                    <input type="text" id="usuarioSUS" name="usuarioSUS" >
+                    <input type="date" name="dataPreenchimentoUsuarioSUS" id="dataPreenchimentoUsuarioSUS" value="2024-07-31">
+                </div>
+
+                <p>Os campos com asterisco (*) são de preenchimento obrigatório.</p>
+
+                <button type="submit" class="btn-enviar" id="btn-enviar" value="">Enviar Formulario</button>
+            </div>
+
+        </form>
+    </main>
+
+
+    <script src="src/js/script.js" defer></script>
+</body>
+</html>

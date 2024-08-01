@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Campo de Texto</title>
+    <style>
+        .formulario {
+            margin: 20px;
+            max-width: 400px;
+            font-family: Arial, sans-serif;
+        }
+
+        .formulario input[type="text"] {
+            width: 100%;
+            height: 40px;
+            padding: 0 20px;
+            border: .5px solid rgba(0, 0, 0, 0.2);
+            outline: none;
+            border-radius: 4px;
+            box-sizing: border-box;
+            display: none; /* Inicialmente escondido */
+        }
+
+        .formulario input[type="text"]:focus {
+            background-color: #f2e3174d;
+            border: 2px solid #ffa500;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .formulario label {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form class="formulario">
+        <div class="inputs-radio">
+            <input type="radio" id="outros" name="tipoContato" value="outros">
+            <label for="outros">Outros:</label>
+        </div>
+        <div class="inputs-radio">
+            <input type="radio" id="outros" name="tipoContato" value="outros">
+            <label for="outros">Outros:</label>
+        </div>
+        <div class="input-outros">
+            <input type="text" placeholder="Digite aqui..." id="campoTexto">
+        </div>
+    </form>
+
+    <script defer>
+        document.addEventListener('DOMContentLoaded', function() {
+            const radioOutros = document.getElementById('outros');
+            const inputOutros = document.getElementById('campoTexto');
+
+            // Adiciona um listener para o evento de mudança no rádio
+            radioOutros.addEventListener('change', function() {
+                if (radioOutros.checked) {
+                    inputOutros.style.display = 'block'; // Mostra o campo de texto
+                } else {
+                    inputOutros.style.display = 'none';  // Esconde o campo de texto
+                }
+            });
+        });
+    </script>
+</body>
+</html>
